@@ -58,9 +58,11 @@ import '../styles/global.css'
 - llamar Props titulo MainLayout ` const { title } = Astro.props;`
 - definir elementos de las props: ` interface Props {title: string;}`
 - utilizar Props titulo titulo MainLayout ` <head>... <title>{title}</title></head>`
+- poner transiciones `import { ClientRouter } from 'astro:transitions';` y `<ClientRouter/>`
 
 ```
 ---
+import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css'
 interface Props {
   title?: string;
@@ -76,6 +78,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+     <ClientRouter/>
   </head>
   <body>
     <main class="mb-10 max-w-5xl m-auto px-2 py-2">

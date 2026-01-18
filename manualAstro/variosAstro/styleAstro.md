@@ -32,6 +32,24 @@
 
 - usar estilo del botton: `<button id="btn-favorite" class="ml-4 mt-4">`
 
+# ESTILOS GLOBALES
+
+0. crear archivo 'src\layouts\BlogLayout.astro':
+   - importar tailwinds: ` @import "tailwindcss";`
+   - crear estilos por etiquetas,id : `html { @apply bg-gray-900 px-10;}`
+
+   ```
+   @import "tailwindcss";
+
+    html {
+        @apply bg-gray-900 px-10;
+    }
+
+    ....
+   ```
+
+1. importar estilos a layout `src\layouts\BlogLayout.astro` : `---  import '../styles/blog.css' ...---`
+
 # ESTILOS CONDICIONALES
 
 0. crear valor booleano controlar condicion `isBig` en component `src\components\pokemons\PokemondCard.astro`:

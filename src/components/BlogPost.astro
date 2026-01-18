@@ -1,0 +1,42 @@
+---
+import '@styles/blog.css'
+
+export interface Props {
+  title: string;
+  description?: string;
+  date?: Date;
+  tags?: string[];
+  image?: string;
+ url?: string;
+}
+
+const { title, description, date, tags, image, url } = Astro.props as any;
+console.log(url)
+const parsedDate: Date | undefined = date
+  ? date instanceof Date
+    ? date
+    : new Date(date)
+  : undefined;
+---
+
+
+    <div class="lg:flex">
+      <img
+        class="object-cover w-full h-56 rounded-lg lg:w-64"
+        src={image ?? "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"}
+        alt={title}
+      />
+
+      <div class="flex flex-col justify-between py-6 lg:mx-6">
+        <a
+          href={url ?? '#'}
+          class="text-xl font-semibold hover:underline text-white "
+        >
+          {description}
+        </a>
+
+        <span class="text-sm text-gray-300">{date ? `On: ${parsedDate?.toLocaleDateString() || new Date().toLocaleDateString()}` : ''}</span>
+      </div>
+    </div>
+
+

@@ -14,6 +14,7 @@
 (islasFrameworksAdapter)[https://docs.astro.build/en/guides/integrations-guide/]
 (directivasTemplate)[https://docs.astro.build/en/reference/directives-reference/#client-directives]
 (#transitionpersist-props)[https://docs.astro.build/en/guides/view-transitions/#transitionpersist-props]
+(importmetaglob)[https://docs.astro.build/en/guides/imports/#importmetaglob/]
 
 ### rutas dinamicas
 
@@ -27,6 +28,11 @@
 (renderOficial)[https://docs.astro.build/en/guides/deploy/render/]
 (ejemploGithubDeploy)[https://www.youtube.com/watch?v=v7HyyOnixJ8]
 (ejemploVercelDeploy)[https://www.youtube.com/watch?v=VyoaF6xwSJc]
+
+### markdown
+
+(astroMarkdown)[https://docs.astro.build/en/guides/markdown-content/]
+(astroMDX)[https://docs.astro.build/en/guides/integrations-guide/mdx/]
 
 ## plantillas
 
@@ -47,6 +53,7 @@
 
 (templates_404)[https://dev.to/stackfindover/35-html-404-page-templates-5bge]
 (navBar)[https://www.creative-tim.com/twcomponents/component/simple-navbar-3]
+(grid-blog-page)[https://www.creative-tim.com/twcomponents/component/grid-blog-page]
 
 ### externos frameworks islas
 

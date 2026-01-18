@@ -24,6 +24,33 @@ npm run preview ( ver como quedaria en produccion (haber creado antes la `/dist`
 
 `<button onclick="history.back()" class="text-blue-500 hover:underline ml-4">regresar</button> `
 
+# VIEW TRANSACTIONS
+
+(view_transitions)[https://docs.astro.build/es/guides/view-transitions/]
+(view_transations)[https://eastondev.com/blog/en/posts/dev/20251202-astro-view-transitions-guide/]
+
+0. los llamamos desde el punto mas alto `src\layouts\MainLayout.astro`:
+
+- fade (default): Fade-in/fade-out, most versatile
+- slide: Slide effect, content slides in from the right, suitable for article detail pages
+- initial: Use browser default styles, basically no animation
+- none: Completely disable animation
+
+- en la consola navegador aparecer esto: ` [astro] Prefetching http://localhost:4321/about with <link rel="prefetch">`
+
+```
+---
+import { ClientRouter,fade,side } from 'astro:transitions';
+---
+ <head>
+    ...
+    <ClientRouter />
+</head>
+<body > //por defecto fade
+<body transition:animate={fade({ duration: '5.5s' })}>
+<body transition:animate="side">
+```
+
 # EXPLICACION CIcLOS DE CARGA
 
 (cicloTrabaosViewTransitionJS)[https://docs.astro.build/en/guides/view-transitions/#lifecycle-events]

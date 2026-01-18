@@ -1,11 +1,15 @@
 ---
 import { ClientRouter } from 'astro:transitions';
-import '../styles/global.css'
-interface Props {
-  title?: string;
-}
 
-const { title } = Astro.props;
+import '../styles/blog.css'
+// interface Props {
+//   title?: string;
+// }
+
+const { title,...rest } = Astro.props;
+const frontmatter = rest.frontmatter || {};
+
+
 ---
 
 <html lang="en">
@@ -14,10 +18,12 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-     <ClientRouter/>
+    <title>{frontmatter.title}</title>
+    <ClientRouter/>
   </head>
   <body class="bg-gray-900">
+    <div class="text-center my-5"><a href="/"  >regresar</a></div>
+    
     <main class="mb-10 max-w-5xl m-auto px-2 py-2">
       <slot />
     </main>
