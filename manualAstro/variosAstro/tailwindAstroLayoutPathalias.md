@@ -8,7 +8,6 @@
    * install depedencies -- yes
    * git repository -- yes
 2. desabilitar barra astro, T: npm run astro preferences disable devToolbar
-
    - se crea en ".astro\settings.json":
 
    ```
@@ -28,7 +27,7 @@
    - Astro will scaffold ./src/styles/global.css. : yes
    - Astro will make the following changes to your config file: yes
    - add `import ../styles/global.css` to `src/layouts/Layout.astro`
-2. hacer la prueba en ``src\pages\index.astro``
+2. hacer la prueba en `src\pages\index.astro`
 
 ```
 ---
@@ -64,7 +63,7 @@ import '../styles/global.css'
 ---
 import '../styles/global.css'
 interface Props {
-  title: string;
+  title?: string;
 }
 
 const { title } = Astro.props;
@@ -79,7 +78,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <main>
+    <main class="mb-10 max-w-5xl m-auto px-2 py-2">
       <slot />
     </main>
   </body>
@@ -105,6 +104,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     <h1 class="text-3xl font-bold text-red-600 underline">Astro</h1>
 </MainLayout>
 ```
+
 # PATH ALIAS
 
 (pathAlias)[https://docs.astro.build/en/guides/imports/#aliases]
