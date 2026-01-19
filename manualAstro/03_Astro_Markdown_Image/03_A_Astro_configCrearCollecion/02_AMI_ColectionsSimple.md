@@ -296,3 +296,61 @@ const blogPost = await getCollection('blog')
 ```
 
 6. add `scroll-behavior: smooth;` a `src\styles\blog.css` para suavizar el scroll: `html {...scroll-behavior: smooth;}`
+
+## complementos
+
+#### formaterar fecha
+
+0. `src\utils\formatter.ts`:
+
+```
+export class Formatter {
+  static formatDate(value: Date): string {
+    const date = new Date(value);
+
+    return Intl.DateTimeFormat("es-ES", {
+      year: "numeric",
+      month: "long",
+      day: "2-digit",
+    }).format(date);
+  }
+}
+```
+
+0. lo aplicamos `src/components/BlogPost.astro`:
+
+```
+---
+import { Formatter } from '@utils/formatter';
+
+
+---
+
+    <span class="text-sm text-gray-300"
+      >{Formatter.formatDate(frontmatter.date)}</span
+    >
+```
+
+### site.config en index
+
+1. creamos y escribimos `src\config\site-config.ts`:
+   ```
+    export const siteConfig = {
+    title: "Mi Blog con Astro",
+    description: "Un blog creado con Astro y Tailwind CSS",
+    };
+   ```
+1. lo importamos y utilizamos en `src\pages\index.astro`
+   - `import { siteConfig } from 'src/config/site-config';` : `{siteConfig.title}`
+
+```
+---
+import { siteConfig } from 'src/config/site-config';
+...
+---
+<MainLayout title="Home Page">
+   <!-- component -->
+<section class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-10 mx-auto">
+        <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">{siteConfig.title}</h1>
+```
