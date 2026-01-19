@@ -131,7 +131,10 @@ import MainLayout from '../layouts/MainLayout.astro';
     "paths": {
       "@components/*": ["./src/components/*"],
       "@interfaces/*": ["./src/interfaces/*"],
-      "@layouts/*": ["./src/layouts/*"]
+      "@layouts/*": ["./src/layouts/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@images/*": ["./src/assets/images/*"]
     }
   }
 ```

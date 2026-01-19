@@ -1,0 +1,26 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import post05Image from '@images/post-05.png';
+import Picture from "astro/components/Picture.astro";
+---
+
+<MainLayout title="imagenes">
+  <h1 class="text-5xl text-white mt-4">Images Page</h1>
+  
+  <Image  
+  quality='low'
+  src={post05Image} width="250" height="250" alt="Sample Image"/>
+  <img loading="lazy" src="/public/assets/images/post-05.png" alt="Sample Image" class="mt-6 rounded-lg shadow-lg" />
+  <Picture
+    fallbackFormat="webp"
+  alt='Descripción imagen'
+  formats={['avif', 'webp','jpeg']}
+    class="mt-6 rounded-lg shadow-lg"
+    widths={[240, 540, 720,post05Image.width]}
+    sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${post05Image.width}px`}
+    src={post05Image}
+   
+  />
+ 
+</MainLayout>
