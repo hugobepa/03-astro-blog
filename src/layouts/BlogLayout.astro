@@ -6,10 +6,10 @@ import '../styles/blog.css'
 //   title?: string;
 // }
 
-const { title,...rest } = Astro.props;
-const frontmatter = rest.frontmatter || {};
+// const { title,...rest } = Astro.props;
+// const frontmatter = rest.frontmatter || {};
 
-
+const{ title } = Astro.props;
 ---
 
 <html lang="en">
@@ -18,11 +18,15 @@ const frontmatter = rest.frontmatter || {};
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{frontmatter.title}</title>
+    <title>{title}</title>
     <ClientRouter/>
   </head>
   <body class="bg-gray-900">
-    <div class="text-center my-5"><a href="/"  >regresar</a></div>
+    <div class="text-center my-5">
+      <a
+      id="btn-back"
+      href="/"  >regresar</a>
+    </div>
     
     <main class="mb-10 max-w-5xl m-auto px-2 py-2">
       <slot />

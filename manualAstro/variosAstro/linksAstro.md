@@ -16,6 +16,11 @@
 (#transitionpersist-props)[https://docs.astro.build/en/guides/view-transitions/#transitionpersist-props]
 (importmetaglob)[https://docs.astro.build/en/guides/imports/#importmetaglob/]
 
+### collecions
+
+(astroCollections)[https://docs.astro.build/en/guides/content-collections/]
+(zodSchema)[https://zod.dev/json-schema]
+
 ### rutas dinamicas
 
 (paginaDinamicas)[https://docs.astro.build/en/reference/errors/get-static-paths-required/]
