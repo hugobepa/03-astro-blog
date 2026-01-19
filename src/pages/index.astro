@@ -3,6 +3,7 @@ import BlogPost from '@components/BlogPost.astro';
 import TypedBlogPost from '@components/TypedBlogPost.astro';
 import MainLayout from '@layouts/MainLayout.astro';
 import { getCollection } from 'astro:content';
+import { siteConfig } from 'src/config/site-config';
 
 
 const blogPost = await getCollection('blog')
@@ -13,12 +14,11 @@ const blogPost = await getCollection('blog')
    <!-- component -->
 <section class="bg-whitebg-gray-900">
     <div class="container px-6 py-10 mx-auto">
-        <h1 class="text-3xl font-semibold capitalize lg:text-4xl text-white">hola mundo</h1>
+        <h1 class="text-3xl font-semibold capitalize lg:text-4xl text-white">{siteConfig.title}</h1>
+
+        <a href="/blog/1" class="mt-4">Ir al Blog</a>
 
         <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-           
-           
-
             {blogPost.map(post => (
                 <TypedBlogPost post={post} />
             )) }
@@ -26,3 +26,12 @@ const blogPost = await getCollection('blog')
         </div>
     </div>
 </section>
+
+<style>
+  a {
+   @import "tailwindcss";
+    @apply text-blue-500  hover:underline cursor-pointer;
+  }
+
+  
+</style>
