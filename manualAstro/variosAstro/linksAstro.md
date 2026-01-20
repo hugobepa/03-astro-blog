@@ -60,6 +60,7 @@
 (templates_404)[https://dev.to/stackfindover/35-html-404-page-templates-5bge]
 (navBar)[https://www.creative-tim.com/twcomponents/component/simple-navbar-3]
 (grid-blog-page)[https://www.creative-tim.com/twcomponents/component/grid-blog-page]
+(compoenetsAstro)[https://starwind.dev/]
 
 ### externos frameworks islas
 

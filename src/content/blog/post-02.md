@@ -2,9 +2,9 @@
 title: Empezando con Flutter
 date: 2024-08-10
 description: Aprende a desarrollar aplicaciones móviles con Flutter y Dart.
-author: John Smith
+author: john-smith
 image: "images/post-02.png"
-tags: Flutter, Mobile Development, Dart
+tags: [Flutter, Mobile Development, Dart]
 ---
 
 # Empezando con Flutter
