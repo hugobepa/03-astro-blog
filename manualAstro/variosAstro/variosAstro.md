@@ -51,6 +51,14 @@ import { ClientRouter,fade,side } from 'astro:transitions';
 <body transition:animate="side">
 ```
 
+# acnhorage de regresar
+
+```
+<a href="/" class="text-blue-500 hover:underline">
+        &larr; regresar
+</a>
+```
+
 # EXPLICACION CIcLOS DE CARGA
 
 (cicloTrabaosViewTransitionJS)[https://docs.astro.build/en/guides/view-transitions/#lifecycle-events]
