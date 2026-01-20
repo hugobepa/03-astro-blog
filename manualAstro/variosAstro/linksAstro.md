@@ -60,7 +60,8 @@
 (templates_404)[https://dev.to/stackfindover/35-html-404-page-templates-5bge]
 (navBar)[https://www.creative-tim.com/twcomponents/component/simple-navbar-3]
 (grid-blog-page)[https://www.creative-tim.com/twcomponents/component/grid-blog-page]
-(compoenetsAstro)[https://starwind.dev/]
+(componentTailwindsAstro)[https://starwind.dev/]
+(paginaAuthor)[https://gist.github.com/Klerith/e754477e54c7393820c066f95f91f9ef]
 
 ### externos frameworks islas
 
