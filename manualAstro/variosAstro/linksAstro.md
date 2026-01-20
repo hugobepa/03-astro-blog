@@ -40,6 +40,13 @@
 (astroMarkdown)[https://docs.astro.build/en/guides/markdown-content/]
 (astroMDX)[https://docs.astro.build/en/guides/integrations-guide/mdx/]
 
+### RSS feed
+
+(endpoints)[https://docs.astro.build/en/guides/endpoints/#request]
+(rss)[https://docs.astro.build/en/recipes/rss/]
+(estiloXML)[https://github.com/genmon/aboutfeeds/blob/main/tools/pretty-feed-v3.xsl]
+(addStyles)[https://docs.astro.build/en/recipes/rss/#adding-a-stylesheet]
+
 ## plantillas
 
 (basica)[https://github.com/hkbertoson/github-pages]
@@ -47,6 +54,7 @@
 (startlight)[https://delucis.github.io/starlight-theme-flexoki/]
 (starligh-markdown)[https://delucis.github.io/starlight-markdown-blocks/]
 (temas)[https://astro.build/themes/1/]
+(astro-build_Theme)[https://astro.build/themes/1/?search=&price%5B%5D=free]
 
 ## externos
 
@@ -91,6 +99,10 @@
 
 ()[https://www.themoviedb.org/]
 ()[https://developer.themoviedb.org/docs/getting-started]
+
+###themes astro
+(athosfere)[https://astro.build/themes/details/astrosphere/]
+(checkUpdates)[https://www.npmjs.com/package/npm-check-updates]
 
 ## Recursos Esenciales para Desarrolladores 🚀
 
